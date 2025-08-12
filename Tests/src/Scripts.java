@@ -1,11 +1,10 @@
 import java.util.*;
 
 public class Scripts {
-    Scanner scanner = new Scanner(System.in);
     public static void RollingDice(){
 
       Random random = new Random();
-      int r1 = random.nextInt(6);
+      int r1 = random.nextInt(7);
 
         System.out.println("Random number: " + r1);
 
