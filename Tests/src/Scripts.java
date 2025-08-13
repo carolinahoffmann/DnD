@@ -4,7 +4,7 @@ public class Scripts {
     public static void RollingDice(){
 
       Random random = new Random();
-      int r1 = random.nextInt(7);
+      int r1 = random.nextInt(1,7);
 
         System.out.println("Random number: " + r1);
 
@@ -13,33 +13,43 @@ public class Scripts {
 // DU BIST IM SCHLAFZIMMER; DER MÖRDER IST DIR AUF DER SCHLICHE: WÄHLE WEISE
         // WIE ENTSCHEIDES DU DICH?
 
-        //NEBENNOTIZ: DOCH LIEBER AUSWAHLMÖGLICHKEITEN; STATT WÜRFEL?
+        //NEBENNOTIZ: ENTSCHEIDUNGSPUNKT WIRD GEWÜRFELT UND GESCHICHTE WIRD DAMIT WEITERERZÄHLT
 switch (r1){
     case 1:
-        antwort = "Deine Wahl ist aussichtslos, der Mörder kommt dir immer näher";
+        antwort = "'Ich renne in den Keller, vielleicht gibt es ein Versteck oder ein Ausgang'-" +
+                " doch unten erwartet dich kein Fluchtweg, sondern ein Raum vollre alter, blutiger Fesseln..." +
+                    "und etwas bewegt sich im Schatten";
         System.out.println(antwort);
         break;
     case 2:
-        antwort = "Deine Wahl war effektiv, du gelangst ins nächste Zimmer";
+        antwort = "'Ich stürme ins Badezimmer und schiebe den Schrank vor die Tür!'" +
+            " Doch als du dich umdrehst, siehst du im Spiegel eine zweite Gestalt, sie steht direkt hinter dir," +
+            "obwohl niemand da ist";
         System.out.println(antwort);
         break;
     case 3:
-        antwort = "Dein Plan ist effektiv, der Mörder geht an dir vorbei";
+        antwort = " 'Ich bleibe stehen und lausche... Vielleicht ist es nur eine Ratte?' " +
+                "Das Kratzen wird lauter, dann bricht eine blutige Hand durch die Wand und packt dich am Arm";
         System.out.println(antwort);
         break;
     case 4:
-        antwort = "Pls try agein";
+        antwort = "'Ich greife nach einem zerbrochenen Flaschenhals als Waffe und warte auf den Mörder!'" +
+                "Doch als er um die Ecke kommt, flüstert er was Unverständliches... und deine Waffe zersplitter von alleine...";
         System.out.println(antwort);
         break;
     case 5:
-        antwort = "bliblablub";
+        antwort = "'Ich folge dem Kratzen... was, wenn jemand Hilfe braucht?'" +
+                "Hinter der Tapete findest du eine geheime Kammer... und ein Tagebuch mit deinem Namen" +
+                "reingeritzt in das Buchcover-";
         System.out.println(antwort);
         break;
     case 6:
-        antwort = "Bananenkuchen";
+        antwort = "'Ich täusche einen Schrei vor und verstecke mich im Schrank, um ihn zu überlisten'" +
+                "Doch als du die Tür schließt, spürst du einen warmen Atem im Nacken... Jemand ist schon hier";
         System.out.println(antwort);
         break;
     }
+
 }
 
 
