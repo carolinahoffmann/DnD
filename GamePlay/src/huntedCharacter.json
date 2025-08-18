@@ -1,0 +1,18 @@
+{
+  "character":
+  {
+    "name": "Mary",
+    "stats": {
+      "health": 15,
+      "defence": 10
+    }
+  },
+  "character2":
+  {
+    "name": "Danny",
+    "stats": {
+      "health": 15,
+      "defence": 7,
+    }
+  }
+}
