@@ -1,10 +1,12 @@
+package GamePlay.src;
+
 import java.util.Random;
 
-public class RollingDice {
 
+public class rollingDice {
     private Random random;
 
-    public RollingDice() {
+    public rollingDice() {
 
         random = new Random();
     }
