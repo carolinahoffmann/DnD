@@ -1,0 +1,10 @@
+{
+  "character":
+  {
+    "name": "Michael Myers",
+    "stats": {
+      "health": "10",
+      "defence": "5"
+    }
+  }
+}

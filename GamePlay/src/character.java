@@ -6,5 +6,13 @@ package GamePlay.src;
  */
 
 public class character {
+public void buildingCharacter(){
+    System.out.println("Michael Myers");
+    System.out.println("Leatherface");
+    System.out.println("Sadako");
+    System.out.println("Jigsaw");
 
+
+
+    }
 }
