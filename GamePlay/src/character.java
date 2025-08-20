@@ -1,4 +1,5 @@
 package GamePlay.src;
+import org.json.JSONObject;
 
 /**
  * Hier werden die einzelnen Charaktere festgelegt, aus welchen man wählen kann
@@ -6,11 +7,11 @@ package GamePlay.src;
  */
 
 public class character {
+    private String name;
+    private int health;
 public void buildingCharacter(){
-    System.out.println("Michael Myers");
-    System.out.println("Leatherface");
-    System.out.println("Sadako");
-    System.out.println("Jigsaw");
+    JSONObject hunter = new JSONObject();
+
 
 
 
