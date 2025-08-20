@@ -22,8 +22,7 @@ public class huntedSerializer {
         try {
             List<String> lines = Files.readAllLines(Path.of(path));
             StringBuilder properJson = new StringBuilder();
-            for(String line : lines)
-            {
+            for(String line : lines) {
                 properJson.append(line); //geht jede Zeile durch und fügt an den String an
             }
 
@@ -36,13 +35,15 @@ public class huntedSerializer {
                 System.out.println("Key: " + key + ", Value: " + value);
                 characterList.add(currentChar);
             }
+
+            return characterList;
         } catch (IOException e) {
             System.out.println("[ERROR] Failed to open file at path: " + path);
-        } catch (JSONException e)
-        {
+        } catch (JSONException e) {
             System.out.println("[ERROR] Json parsing failed: " + e.toString());
         }
-        return "";
+
+        return new ArrayList<character>();
     }
 
     //JAVA zu JSON (JSON Datei zu schreiben)
