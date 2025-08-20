@@ -9,6 +9,8 @@ import org.json.JSONObject;
 public class character {
     private String name;
     private int health;
+    private int defence;
+
 public void buildingCharacter(){
     JSONObject hunter = new JSONObject();
 
