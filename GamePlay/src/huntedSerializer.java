@@ -44,7 +44,7 @@ public class huntedSerializer {
         }
 
         return new ArrayList<character>();
-        //Test 123
+        
     }
 
     //JAVA zu JSON (JSON Datei zu schreiben)
