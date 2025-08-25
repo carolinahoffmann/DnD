@@ -12,10 +12,7 @@ public class character {
     private int defence;
 
 public void buildingCharacter(){
+    JSONObject hunted = new JSONObject();
     JSONObject hunter = new JSONObject();
-
-
-
-
     }
 }

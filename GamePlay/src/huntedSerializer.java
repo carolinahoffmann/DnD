@@ -3,7 +3,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -44,12 +43,11 @@ public class huntedSerializer {
         }
 
         return new ArrayList<character>();
-        
+
     }
 
     //JAVA zu JSON (JSON Datei zu schreiben)
     public String serializeHunted(){
-
 
         return "";
     }
