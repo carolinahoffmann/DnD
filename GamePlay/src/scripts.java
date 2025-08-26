@@ -1,5 +1,7 @@
 package GamePlay.src;
 
+import java.util.Scanner;
+
 public class scripts {
 
     public void generatingResponse(){
@@ -30,10 +32,37 @@ public class scripts {
         }
 
 
+        public void startScript() {
+            Scanner scanner = new Scanner(System.in);
+            String user = scanner.nextLine();
 
+            String userAnswer = switch (user) {
+                case "hunter" -> "The quarry is in sight. Prepare to engage.";
+                case "Hunter" -> "The quarry is in sight. Prepare to engage.";
+                case "hunted" -> "The murderer lies in wait. Get ready.";
+                case "Hunted" -> "The murderer lies in wait. Get ready.";
+                default -> "";
+            };
+            System.out.println(userAnswer);
 
+            if (user.contentEquals("hunter")){
+                //scripts myscripts = new scripts();
+                //myscripts.generatingResponse();
+            } else if (user.contentEquals("Hunter")) {
 
+            } else if (user.contentEquals("hunted")) {
+
+            }else if (user.contentEquals("Hunted")){
+
+            }
+            // ES SOLLEN NUR DIE NAMEN ANGEZEIGT WERDEN; DANN NOCHMAL DIE WAHL AUS VERSCHIEDENEN CHARACTERN GEBEN??
+            //EINE METHODE IN SCRIPTS SCHREIBEN WEGEN DER IF ELSE UND CASE: DANN HIER AUF DIE METHODE VERWEISEN?
+            // UND DANN NACH DER WAHL ZU HUNTER ODER HUNTED DANN FRAGEN WELCHEN CHARACTER ODER ZUFALLSPRINZIP??
+            // UND DANN NACH DER WAHL/ ZUFALL DANN IN EINEM RAUM STARTEN ODER WO?
+
+        }
     }
+
 
 
 

@@ -26,12 +26,11 @@ public class huntedSerializer {
             }
 
             JSONObject jsonObject = new JSONObject(properJson.toString());
-
             ArrayList<character> characterList = new ArrayList<>();
             for (String key : jsonObject.keySet()) {
                 character currentChar = new character();
                 Object value = jsonObject.get(key);
-                System.out.println("Key: " + key + ", Value: " + value);
+                System.out.println("Key: " + key);
                 characterList.add(currentChar);
             }
 

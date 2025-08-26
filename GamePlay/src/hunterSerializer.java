@@ -32,7 +32,7 @@ public class hunterSerializer {
             for(String key : jsonObject.keySet()){
                 character currentChar = new character();
                 Object value = jsonObject.get(key);
-                System.out.println("Key: " + key + ", Value: " + value);
+                System.out.println("Key: " + key);
                 characterList.add(currentChar);
             }
             return characterList;
