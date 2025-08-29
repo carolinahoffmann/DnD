@@ -1,18 +1,29 @@
 {
-  "character":
+  "Mary":
   {
     "name": "Mary",
     "stats": {
+      "life": 20,
       "health": 15,
       "defence": 10
     }
   },
-  "character2":
+  "Danny":
   {
     "name": "Danny",
     "stats": {
+      "life": 20,
       "health": 15,
       "defence": 7
+    }
+  },
+  "Margot":
+  {
+    "name": "Margot",
+    "stats": {
+      "life": 20,
+      "health": 15,
+      "defence": 10
     }
   }
 }

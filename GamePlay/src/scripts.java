@@ -37,10 +37,10 @@ public class scripts {
             String user = scanner.nextLine();
 
             String userAnswer = switch (user) {
-                case "hunter" -> "The quarry is in sight. Prepare to engage.";
-                case "Hunter" -> "The quarry is in sight. Prepare to engage.";
-                case "hunted" -> "The murderer lies in wait. Get ready.";
-                case "Hunted" -> "The murderer lies in wait. Get ready.";
+                case "hunter" -> "The quarry is in sight. Prepare to engage.\n Choose a character: ";
+                case "Hunter" -> "The quarry is in sight. Prepare to engage.\n Choose your character ";
+                case "hunted" -> "The murderer lies in wait. Get ready.\n Choose your character";
+                case "Hunted" -> "The murderer lies in wait. Get ready. \n Choose your character";
                 default -> "";
             };
             System.out.println(userAnswer);
@@ -48,6 +48,8 @@ public class scripts {
             if (user.contentEquals("hunter")){
                 //scripts myscripts = new scripts();
                 //myscripts.generatingResponse();
+                new gameSettings().jsonSettings();
+
             } else if (user.contentEquals("Hunter")) {
 
             } else if (user.contentEquals("hunted")) {
