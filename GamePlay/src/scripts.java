@@ -47,26 +47,39 @@ public class scripts {
 
             if (user.contentEquals("hunter")){
                 new gameSettings().jsonHunterSettings();
-                new scripts().characterScript();
+                new scripts().characterHunterScript();
 
             } else if (user.contentEquals("Hunter")) {
                 new gameSettings().jsonHunterSettings();
-                new scripts().characterScript();
+                new scripts().characterHunterScript();
 
             } else if (user.contentEquals("hunted")) {
                 new gameSettings().jsonHuntedSettings();
-                new scripts().characterScript();
+                new scripts().characterHuntedScript();
 
             }else if (user.contentEquals("Hunted")){
                 new gameSettings().jsonHuntedSettings();
-                new scripts().characterScript();
+                new scripts().characterHuntedScript();
             }
             // ES SOLLEN NUR DIE NAMEN ANGEZEIGT WERDEN; DANN NOCHMAL DIE WAHL AUS VERSCHIEDENEN CHARACTERN GEBEN??
             //EINE METHODE IN SCRIPTS SCHREIBEN WEGEN DER IF ELSE UND CASE: DANN HIER AUF DIE METHODE VERWEISEN?
             // UND DANN NACH DER WAHL ZU HUNTER ODER HUNTED DANN FRAGEN WELCHEN CHARACTER ODER ZUFALLSPRINZIP??
             // UND DANN NACH DER WAHL/ ZUFALL DANN IN EINEM RAUM STARTEN ODER WO?
         }
-        public void characterScript() {
+        public void characterHunterScript() {
+            System.out.println("Who are you gonna be, choose wisely");
+            Scanner scanner = new Scanner(System.in);
+            String user2 = scanner.nextLine();
+
+            String userAnswer2 = switch (user2){
+                case "Michael Myers" -> "Good choice... Let the Game begin";
+
+                    default -> "";
+            };
+            System.out.println(userAnswer2);
+        }
+        public void characterHuntedScript() {
+            System.out.println("Who are you gonna be, choose wisely");
 
         }
     }

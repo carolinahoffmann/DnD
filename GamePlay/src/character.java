@@ -7,10 +7,10 @@ import org.json.JSONObject;
  */
 
 public class character {
-    private String name;
     private int health;
     private int defence;
     private int life;
+    private String weapon;
 
 public void buildingCharacter(){
     JSONObject hunted = new JSONObject();

@@ -4,7 +4,8 @@
     "stats": {
       "life": 20,
       "health": 10,
-      "defence": 5
+      "defence": 5,
+      "weapon": "knife"
     }
   },
   "Leatherface":
@@ -12,7 +13,8 @@
     "stats": {
       "life": 20,
       "health": 10,
-      "defence": 5
+      "defence": 5,
+      "weapon": "chainsaw"
     }
   }
 }
