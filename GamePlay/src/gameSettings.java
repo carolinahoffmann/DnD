@@ -9,12 +9,14 @@ public class gameSettings {
         System.out.println("Start\nChoose your character\n\nAre you a hunter or the hunted?");
         new scripts().startScript();
     }
-    public void jsonSettings() {
+    public void jsonHuntedSettings() {
             huntedSerializer serializer = new huntedSerializer("Gameplay/src/huntedCharacter.json");
             serializer.deserializeHunted();
-            hunterSerializer serializer1 = new hunterSerializer("Gameplay/src/hunterCharacter.json");
-            serializer1.deserializeHunter();
         }
+    public void jsonHunterSettings(){
+        hunterSerializer serializer1 = new hunterSerializer("Gameplay/src/hunterCharacter.json");
+        serializer1.deserializeHunter();
+    }
     }
 
 

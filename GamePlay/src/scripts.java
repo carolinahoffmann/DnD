@@ -37,30 +37,36 @@ public class scripts {
             String user = scanner.nextLine();
 
             String userAnswer = switch (user) {
-                case "hunter" -> "The quarry is in sight. Prepare to engage.\n Choose a character: ";
-                case "Hunter" -> "The quarry is in sight. Prepare to engage.\n Choose your character ";
-                case "hunted" -> "The murderer lies in wait. Get ready.\n Choose your character";
-                case "Hunted" -> "The murderer lies in wait. Get ready. \n Choose your character";
+                case "hunter" -> "The quarry is in sight. Prepare to engage.\nChoose a character: ";
+                case "Hunter" -> "The quarry is in sight. Prepare to engage.\nChoose your character ";
+                case "hunted" -> "The murderer lies in wait. Get ready.\nChoose your character";
+                case "Hunted" -> "The murderer lies in wait. Get ready. \nChoose your character";
                 default -> "";
             };
             System.out.println(userAnswer);
 
             if (user.contentEquals("hunter")){
-                //scripts myscripts = new scripts();
-                //myscripts.generatingResponse();
-                new gameSettings().jsonSettings();
+                new gameSettings().jsonHunterSettings();
+                new scripts().characterScript();
 
             } else if (user.contentEquals("Hunter")) {
+                new gameSettings().jsonHunterSettings();
+                new scripts().characterScript();
 
             } else if (user.contentEquals("hunted")) {
+                new gameSettings().jsonHuntedSettings();
+                new scripts().characterScript();
 
             }else if (user.contentEquals("Hunted")){
-
+                new gameSettings().jsonHuntedSettings();
+                new scripts().characterScript();
             }
             // ES SOLLEN NUR DIE NAMEN ANGEZEIGT WERDEN; DANN NOCHMAL DIE WAHL AUS VERSCHIEDENEN CHARACTERN GEBEN??
             //EINE METHODE IN SCRIPTS SCHREIBEN WEGEN DER IF ELSE UND CASE: DANN HIER AUF DIE METHODE VERWEISEN?
             // UND DANN NACH DER WAHL ZU HUNTER ODER HUNTED DANN FRAGEN WELCHEN CHARACTER ODER ZUFALLSPRINZIP??
             // UND DANN NACH DER WAHL/ ZUFALL DANN IN EINEM RAUM STARTEN ODER WO?
+        }
+        public void characterScript() {
 
         }
     }

@@ -1,16 +1,14 @@
 {
-  "character":
+  "Michael Myers":
   {
-    "name": "Michael Myers",
     "stats": {
       "life": 20,
       "health": 10,
       "defence": 5
     }
   },
-  "character2":
+  "Leatherface":
   {
-    "name": "Leatherface",
     "stats": {
       "life": 20,
       "health": 10,

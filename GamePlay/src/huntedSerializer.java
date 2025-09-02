@@ -30,7 +30,7 @@ public class huntedSerializer {
             for (String key : jsonObject.keySet()) {
                 character currentChar = new character();
                 Object value = jsonObject.get(key);
-                System.out.println(key);
+                System.out.println(key + ": " + value);
                 characterList.add(currentChar);
             }
 

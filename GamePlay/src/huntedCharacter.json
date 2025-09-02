@@ -1,8 +1,6 @@
 {
   "Mary":
-  {
-    "name": "Mary",
-    "stats": {
+  {"stats": {
       "life": 20,
       "health": 15,
       "defence": 10
@@ -10,7 +8,6 @@
   },
   "Danny":
   {
-    "name": "Danny",
     "stats": {
       "life": 20,
       "health": 15,
@@ -19,7 +16,6 @@
   },
   "Margot":
   {
-    "name": "Margot",
     "stats": {
       "life": 20,
       "health": 15,
