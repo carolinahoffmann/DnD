@@ -1,12 +1,12 @@
 {
-  "Mary":
+  "(1)Mary":
   {"stats": {
       "life": 20,
       "health": 15,
       "defence": 10
     }
   },
-  "Danny":
+  "(2)Danny":
   {
     "stats": {
       "life": 20,
@@ -14,7 +14,7 @@
       "defence": 7
     }
   },
-  "Margot":
+  "(3)Margot":
   {
     "stats": {
       "life": 20,

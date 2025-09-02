@@ -1,20 +1,22 @@
 {
-  "Michael Myers":
+  "(1)Michael Myers":
   {
     "stats": {
       "life": 20,
       "health": 10,
       "defence": 5,
-      "weapon": "knife"
+      "weapon": "knife",
+      "speed": 10
     }
   },
-  "Leatherface":
+  "(2)Leatherface":
   {
     "stats": {
       "life": 20,
       "health": 10,
       "defence": 5,
-      "weapon": "chainsaw"
+      "weapon": "chainsaw",
+      "speed": 15
     }
   }
 }

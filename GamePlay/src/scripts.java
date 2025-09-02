@@ -67,19 +67,37 @@ public class scripts {
             // UND DANN NACH DER WAHL/ ZUFALL DANN IN EINEM RAUM STARTEN ODER WO?
         }
         public void characterHunterScript() {
-            System.out.println("Who are you gonna be, choose wisely");
+            System.out.println("Who are you gonna be, choose wisely \nPick a character by entering their number");
             Scanner scanner = new Scanner(System.in);
             String user2 = scanner.nextLine();
 
-            String userAnswer2 = switch (user2){
-                case "Michael Myers" -> "Good choice... Let the Game begin";
-
-                    default -> "";
+            switch (user2){
+                case "1":
+                    System.out.println("Good choice... Let the Game begin");
+                    new scripts().startGameScript();
+                    break;
+                case "2":
+                    System.out.println("blablabla");
+                    break;
+                default:
+                    System.out.println("bla");
             };
-            System.out.println(userAnswer2);
+            System.out.println(user2);
         }
         public void characterHuntedScript() {
-            System.out.println("Who are you gonna be, choose wisely");
+            System.out.println("Who are you gonna be, choose wisely \nPick a character by entering their number");
+            Scanner scanner = new Scanner(System.in);
+            String user2 = scanner.nextLine();
+
+            switch (user2){
+                case "1":
+                    System.out.println("testtest");
+                    break;
+            }
+        }
+
+
+        private void startGameScript() {
 
         }
     }

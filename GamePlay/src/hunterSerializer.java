@@ -15,8 +15,6 @@ public class hunterSerializer {
     public hunterSerializer(String path) {
     this.path = path;
     }
-
-
     //JSON zu JAVA(JSON Datei gelesen werden kann)
     public List<character> deserializeHunter() {
         try {
