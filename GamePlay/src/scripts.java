@@ -34,13 +34,12 @@ public class scripts {
 
         public void startScript() {
             Scanner scanner = new Scanner(System.in);
-            String user = scanner.nextLine();
+            String user = scanner.nextLine().toLowerCase().trim();
 
             String userAnswer = switch (user) {
                 case "hunter" -> "The quarry is in sight. Prepare to engage.\nChoose a character: ";
-                case "Hunter" -> "The quarry is in sight. Prepare to engage.\nChoose your character ";
                 case "hunted" -> "The murderer lies in wait. Get ready.\nChoose your character";
-                case "Hunted" -> "The murderer lies in wait. Get ready. \nChoose your character";
+
                 default -> "";
             };
             System.out.println(userAnswer);
@@ -50,15 +49,7 @@ public class scripts {
                 new gameSettings().jsonHunterSettings();
                 new scripts().characterHunterScript();
 
-            } else if (user.contentEquals("Hunter")) {
-                new gameSettings().jsonHunterSettings();
-                new scripts().characterHunterScript();
-
             } else if (user.contentEquals("hunted")) {
-                new gameSettings().jsonHuntedSettings();
-                new scripts().characterHuntedScript();
-
-            }else if (user.contentEquals("Hunted")){
                 new gameSettings().jsonHuntedSettings();
                 new scripts().characterHuntedScript();
             }
@@ -86,7 +77,10 @@ public class scripts {
     // Hunted starts outside. He got a message from an old friend, to meet him here, but he is nowhere to find. Did you hear it.. Could it be him??
     // You need to look, or do you? Choose from (blablabla)
 
-    
+
+    //later, that the text is written like a typewriter
+
+
         public void characterHuntedScript() {
             System.out.println("Who are you gonna be, choose wisely \nPick a character by entering their number");
             Scanner scanner = new Scanner(System.in);
@@ -94,14 +88,43 @@ public class scripts {
 
             switch (user2){
                 case "1":
-                    System.out.println("testtest");
+                    new scripts().startGameScript();
                     break;
             }
         }
 
 
         private void startGameScript() {
-
+            System.out.println("Your phone buzzes violently in your pocket, shattering the quiet of your evening. It’s a single text message from an unknown number. No greeting, no explanation. Just an address.\n" +
+                    "\n" +
+                    "UNKNOWN NUMBER: 17 Ravenscroft Lane. Come alone.\n" +
+                    "\n" +
+                    "A cold knot forms in your stomach. Before the panic can fully take hold, your phone rings. It’s your friend, Mark.\n" +
+                    "\n" +
+                    "\"Hey,\" you answer, your voice tense. \"You are not going to believe what I just—\"\n" +
+                    "\n" +
+                    "\"Seventeen Ravenscroft Lane,\" Mark interrupts, his words coming in a rushed, excited gasp. \"I got it too. What the hell is this? Some kind of prank?\"\n" +
+                    "\n" +
+                    "You can hear the rumble of his car engine in the background. Your blood runs cold.\n" +
+                    "\n" +
+                    "\"Wait, you're going now? Mark, don't be stupid, we don't know what this is!\"\n" +
+                    "\n" +
+                    "\"Are you kidding? This is the most interesting thing that's happened all year! I'm already on my way. Meet me there. We'll figure it out together.\"\n" +
+                    "\n" +
+                    "The line goes dead.\n" +
+                    "\n" +
+                    "You hurry, pushing your car well past the speed limit, a sense of dread growing with every mile. The address leads you to a dilapidated house at the end of a long, deserted lane, shrouded in mist. You are late.\n" +
+                    "\n" +
+                    "The scene is wrong. Deeply wrong.\n" +
+                    "No cars are in sight. Not even Mark's. There are no people, and the nearest neighbor is nowhere visible. An oppressive silence hangs over everything, broken only by the wind.\n" +
+                    "\n" +
+                    "Then, a single, piercing scream cuts through the air from inside the house. The front door hangs open, a dark mouth inviting you in.\n" +
+                    "\n" +
+                    "Your heart hammers against your ribs. As you approach, your eyes catch a glimpse of something in the dim hallway through the open door. An arm. Limp. Motionless.\n" +
+                    "\n" +
+                    "But it’s the watch on the wrist that makes your breath catch in your throat. You know that watch. You gave it to Mark for his birthday.\n" +
+                    "\n" +
+                    "What do you do?");
         }
     }
 

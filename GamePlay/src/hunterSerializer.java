@@ -1,6 +1,7 @@
 package GamePlay.src;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.JSONString;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -15,6 +16,16 @@ public class hunterSerializer {
     public hunterSerializer(String path) {
     this.path = path;
     }
+
+
+    public String prettier (String jsonString) {
+        return jsonString.replaceAll("\\{", " ");
+
+
+    }
+
+
+
     //JSON zu JAVA(JSON Datei gelesen werden kann)
     public List<character> deserializeHunter() {
         try {
@@ -30,7 +41,8 @@ public class hunterSerializer {
             for(String key : jsonObject.keySet()){
                 character currentChar = new character();
                 Object value = jsonObject.get(key);
-                System.out.println(key + value);
+                String jsonString = prettier(value.toString());
+                System.out.println(key + jsonString);
                 characterList.add(currentChar);
             }
             return characterList;
