@@ -44,7 +44,8 @@ public class scripts {
                 default -> "";
             };
             System.out.println(userAnswer);
-
+            //block if user makes a typo (3times??)
+            //if 3rd time wrong, throw exception (For schleife)
             if (user.contentEquals("hunter")){
                 new gameSettings().jsonHunterSettings();
                 new scripts().characterHunterScript();
@@ -61,10 +62,6 @@ public class scripts {
                 new gameSettings().jsonHuntedSettings();
                 new scripts().characterHuntedScript();
             }
-            // ES SOLLEN NUR DIE NAMEN ANGEZEIGT WERDEN; DANN NOCHMAL DIE WAHL AUS VERSCHIEDENEN CHARACTERN GEBEN??
-            //EINE METHODE IN SCRIPTS SCHREIBEN WEGEN DER IF ELSE UND CASE: DANN HIER AUF DIE METHODE VERWEISEN?
-            // UND DANN NACH DER WAHL ZU HUNTER ODER HUNTED DANN FRAGEN WELCHEN CHARACTER ODER ZUFALLSPRINZIP??
-            // UND DANN NACH DER WAHL/ ZUFALL DANN IN EINEM RAUM STARTEN ODER WO?
         }
         public void characterHunterScript() {
             System.out.println("Who are you gonna be, choose wisely \nPick a character by entering their number");
@@ -84,6 +81,12 @@ public class scripts {
             };
             System.out.println(user2);
         }
+
+    // Hunter starts in the house, with a dead body in front of it. But the victim let out a cry. Hide and wait for your next prey...
+    // Hunted starts outside. He got a message from an old friend, to meet him here, but he is nowhere to find. Did you hear it.. Could it be him??
+    // You need to look, or do you? Choose from (blablabla)
+
+    
         public void characterHuntedScript() {
             System.out.println("Who are you gonna be, choose wisely \nPick a character by entering their number");
             Scanner scanner = new Scanner(System.in);
