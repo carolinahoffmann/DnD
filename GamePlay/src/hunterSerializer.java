@@ -19,7 +19,7 @@ public class hunterSerializer {
 
 
     public String prettier (String jsonString) {
-        return jsonString.replaceAll("[{}\"]", " ");
+        return jsonString.replaceAll("[{}]"," ").replaceAll("\"","");
     }
 
     //JSON zu JAVA(JSON Datei gelesen werden kann)
