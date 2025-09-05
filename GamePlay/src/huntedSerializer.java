@@ -15,6 +15,11 @@ public class huntedSerializer {
         this.path = path; //dass er den richtigen Pfad zwischenspeichert
     }
 
+
+    public String prettier (String jsonString) {
+        return jsonString.replaceAll("[{}]"," ").replaceAll("\"","");
+    }
+
     //JSON zu JAVA(JSON Datei gelesen werden kann)
     public List<character> deserializeHunted()
     {
@@ -30,7 +35,8 @@ public class huntedSerializer {
             for (String key : jsonObject.keySet()) {
                 character currentChar = new character();
                 Object value = jsonObject.get(key);
-                System.out.println(key + ": " + value);
+                String jsonString = prettier(value.toString());
+                System.out.println(key + jsonString);
                 characterList.add(currentChar);
             }
 

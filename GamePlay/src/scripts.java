@@ -59,18 +59,19 @@ public class scripts {
             Scanner scanner = new Scanner(System.in);
             String user2 = scanner.nextLine();
 
-            switch (user2){
-                case "1":
-                    System.out.println("Good choice... Let the Game begin");
-                    new scripts().startGameScript();
-                    break;
-                case "2":
-                    System.out.println("blablabla");
-                    break;
-                default:
-                    System.out.println("bla");
-            };
-            System.out.println(user2);
+            while (user2.contentEquals("1")){
+            return ;
+            }
+            //switch (user2){
+            //    case "1":
+            //    new scripts().startGameScriptHunted();
+            //    break;
+            //    case "2";
+            //    break;
+            //    default;
+            //    System.out.println("bla");
+            //    };
+            //System.out.println(user2);
         }
 
     // Hunter starts in the house, with a dead body in front of it. But the victim let out a cry. Hide and wait for your next prey...
@@ -88,13 +89,12 @@ public class scripts {
 
             switch (user2){
                 case "1":
-                    new scripts().startGameScript();
                     break;
             }
         }
 
 
-        private void startGameScript() {
+        private void startGameScriptHunted() {
             System.out.println("Your phone buzzes violently in your pocket, shattering the quiet of your evening. It’s a single text message from an unknown number. No greeting, no explanation. Just an address.\n" +
                     "\n" +
                     "UNKNOWN NUMBER: 17 Ravenscroft Lane. Come alone.\n" +
