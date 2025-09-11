@@ -41,11 +41,12 @@ public class scripts {
             //};
             //System.out.println(userAnswer);
             Scanner scanner = new Scanner(System.in);
-            String user = scanner.nextLine().toLowerCase().trim();
+
             int tries = 0;
             int maxTries = 3;
 
             while (tries < maxTries){
+                String user = scanner.nextLine().toLowerCase().trim();
                 if (user.contentEquals("hunter")) {
                     new gameSettings().jsonHunterSettings();
                     new scripts().characterHunterScript();
@@ -55,14 +56,12 @@ public class scripts {
                     new scripts().characterHuntedScript();
                     break;
                 }else {
+                    System.out.println("Try again.\nHunter or hunted?");
                     tries++;
-                    System.out.println("Try again. Remaining attempts: " +  tries);
-                    new gameSettings().gameStart();
-                    return;
                 }
             }
-
-            if(tries > 3){
+            scanner.close();
+            if (tries == maxTries) {
                 throw new IllegalArgumentException("Game over...");
             }
         }
