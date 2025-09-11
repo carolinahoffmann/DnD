@@ -33,15 +33,7 @@ public class scripts {
 
 
         public void startScript() {
-            //String userAnswer = switch (user) {
-            //  case "hunter" -> "The quarry is in sight. Prepare to engage.\nChoose a character: ";
-            //case "hunted" -> "The murderer lies in wait. Get ready.\nChoose your character";
-
-            //default -> "";
-            //};
-            //System.out.println(userAnswer);
             Scanner scanner = new Scanner(System.in);
-
             int tries = 0;
             int maxTries = 3;
 
@@ -73,22 +65,18 @@ public class scripts {
             while (user2.contentEquals("1")){
             return ;
             }
-            //switch (user2){
-            //    case "1":
-            //    new scripts().startGameScriptHunted();
-            //    break;
-            //    case "2";
-            //    break;
-            //    default;
-            //    System.out.println("bla");
-            //    };
-            //System.out.println(user2);
+            switch (user2){
+                case "1":
+                    new scripts().startGameScriptHunter();
+                break;
+                case "2":
+                    new scripts().startGameScriptHunter();
+                break;
+                default: System.out.println("bla");
+
+                };
+            System.out.println(user2);
         }
-
-    // Hunter starts in the house, with a dead body in front of it. But the victim let out a cry. Hide and wait for your next prey...
-    // Hunted starts outside. He got a message from an old friend, to meet him here, but he is nowhere to find. Did you hear it.. Could it be him??
-    // You need to look, or do you? Choose from (blablabla)
-
 
     //later, that the text is written like a typewriter
 
@@ -136,6 +124,13 @@ public class scripts {
                     "But it’s the watch on the wrist that makes your breath catch in your throat. You know that watch. You gave it to Mark for his birthday.\n" +
                     "\n" +
                     "What do you do?");
+        }
+
+        private void startGameScriptHunter(){
+            System.out.println("PHONE (TEXT): 17 Ravenscroft Lane. Come alone.\n'Now we wait'- I think to myself" +
+                    "";
+
+
         }
     }
 
