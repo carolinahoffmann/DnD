@@ -1,7 +1,6 @@
 package GamePlay.src;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONString;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -9,12 +8,11 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class hunterSerializer {
+public class HuntedSerializer {
     private String path;
 
-    public hunterSerializer(String path) {
-    this.path = path;
+    public HuntedSerializer(String path){ //konstruktor
+        this.path = path; //dass er den richtigen Pfad zwischenspeichert
     }
 
 
@@ -23,35 +21,38 @@ public class hunterSerializer {
     }
 
     //JSON zu JAVA(JSON Datei gelesen werden kann)
-    public List<character> deserializeHunter() {
+    public List<Character> deserializeHunted()
+    {
         try {
             List<String> lines = Files.readAllLines(Path.of(path));
             StringBuilder properJson = new StringBuilder();
-            for(String line : lines){
-                properJson.append(line);
+            for(String line : lines) {
+                properJson.append(line); //geht jede Zeile durch und fügt an den String an
             }
 
             JSONObject jsonObject = new JSONObject(properJson.toString());
-
-            ArrayList<character> characterList = new ArrayList<>();
-            for(String key : jsonObject.keySet()){
-                character currentChar = new character();
+            ArrayList<Character> characterList = new ArrayList<>();
+            for (String key : jsonObject.keySet()) {
+                Character currentChar = new Character();
                 Object value = jsonObject.get(key);
                 String jsonString = prettier(value.toString());
                 System.out.println(key + jsonString);
                 characterList.add(currentChar);
             }
+
             return characterList;
-        }catch (IOException r){
+        } catch (IOException e) {
             System.out.println("[ERROR] Failed to open file at path: " + path);
-        }catch (JSONException r){
-            System.out.println("[ERROR] Json parsing failed: " + r.toString());
+        } catch (JSONException e) {
+            System.out.println("[ERROR] Json parsing failed: " + e.toString());
         }
-        return new ArrayList<character>();
+
+        return new ArrayList<Character>();
+
     }
 
     //JAVA zu JSON (JSON Datei zu schreiben)
-    public String serializeHunter(){
+    public String serializeHunted(){
 
         return "";
     }

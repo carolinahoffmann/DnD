@@ -1,7 +1,7 @@
 package GamePlay.src;
 import org.json.JSONObject;
 
-public class character {
+public class Character {
     private int health;
     private int defence;
     private int life;
