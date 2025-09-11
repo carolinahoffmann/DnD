@@ -33,25 +33,37 @@ public class scripts {
 
 
         public void startScript() {
+            //String userAnswer = switch (user) {
+            //  case "hunter" -> "The quarry is in sight. Prepare to engage.\nChoose a character: ";
+            //case "hunted" -> "The murderer lies in wait. Get ready.\nChoose your character";
+
+            //default -> "";
+            //};
+            //System.out.println(userAnswer);
             Scanner scanner = new Scanner(System.in);
             String user = scanner.nextLine().toLowerCase().trim();
+            int tries = 0;
+            int maxTries = 3;
 
-            String userAnswer = switch (user) {
-                case "hunter" -> "The quarry is in sight. Prepare to engage.\nChoose a character: ";
-                case "hunted" -> "The murderer lies in wait. Get ready.\nChoose your character";
+            while (tries < maxTries){
+                if (user.contentEquals("hunter")) {
+                    new gameSettings().jsonHunterSettings();
+                    new scripts().characterHunterScript();
+                    break;
+                } else if (user.contentEquals("hunted")) {
+                    new gameSettings().jsonHuntedSettings();
+                    new scripts().characterHuntedScript();
+                    break;
+                }else {
+                    tries++;
+                    System.out.println("Try again. Remaining attempts: " +  tries);
+                    new gameSettings().gameStart();
+                    return;
+                }
+            }
 
-                default -> "";
-            };
-            System.out.println(userAnswer);
-            //block if user makes a typo (3times??)
-            //if 3rd time wrong, throw exception (For schleife)
-            if (user.contentEquals("hunter")){
-                new gameSettings().jsonHunterSettings();
-                new scripts().characterHunterScript();
-
-            } else if (user.contentEquals("hunted")) {
-                new gameSettings().jsonHuntedSettings();
-                new scripts().characterHuntedScript();
+            if(tries > 3){
+                throw new IllegalArgumentException("Game over...");
             }
         }
         public void characterHunterScript() {
