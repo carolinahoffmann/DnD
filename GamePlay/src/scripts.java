@@ -88,6 +88,7 @@ public class scripts {
 
             switch (user2){
                 case "1":
+                    new scripts().startGameScriptHunted();
                     break;
             }
         }
