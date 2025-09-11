@@ -127,8 +127,17 @@ public class scripts {
         }
 
         private void startGameScriptHunter(){
-            System.out.println("PHONE (TEXT): 17 Ravenscroft Lane. Come alone.\n'Now we wait'- I think to myself" +
-                    "";
+            System.out.println("17 Ravenscroft Lane. Come alone. Sent.\n" +
+                    "\n" +
+                    "Now we wait. I watch the screen, the glow painting my knuckles white. It isn't the most elegant plan. A mysterious text? A bit cliché. But it's the only play. He's cautious, paranoid. Without the bait of his friend, he'd never take the hook.\n" +
+                    "\n" +
+                    "My phone vibrates. The audio feed from Mark's car erupts with his excited, stupid voice. \"Seventeen Ravenscroft Lane! I got it too!\"\n" +
+                    "\n" +
+                    "A smile touches my lips. Perfect. The herd animal, leading the predator right to its heart.\n" +
+                    "\n" +
+                    "I listen as my target tries to warn him, his voice tight with fear. Good. Let him be afraid. Let him rush. Fear makes you sloppy.\n" +
+                    "\n" +
+                    "The engine roars in the feed. He's moving. The game is on.");
 
 
         }
