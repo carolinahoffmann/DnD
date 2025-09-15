@@ -76,60 +76,65 @@ public class Scripts {
         Scanner scanner = new Scanner(System.in);
         String user2 = scanner.nextLine();
 
-        switch (user2) {
-            case "1":
-                new Scripts().startGameScriptHunted();
-                break;
+        if((user2.equals("1")||(user2.equals("2"))||(user2.equals("3")))){
+            new Scripts().startGameScriptHunted();
         }
     }
 
 
     private void startGameScriptHunted() {
-        System.out.println("Your phone buzzes violently in your pocket, shattering the quiet of your evening. It’s a single text message from an unknown number. No greeting, no explanation. Just an address.\n" +
-                "\n" +
-                "UNKNOWN NUMBER: 17 Ravenscroft Lane. Come alone.\n" +
-                "\n" +
+        System.out.println("Your phone buzzes violently in your pocket, shattering the quiet of your evening. It’s a single text message from an unknown number." +
+                        "No greeting, no explanation. \nJust an address. UNKNOWN NUMBER: 17 Ravenscroft Lane. Come alone. " +
                 "A cold knot forms in your stomach. Before the panic can fully take hold, your phone rings. It’s your friend, Mark.\n" +
-                "\n" +
                 "\"Hey,\" you answer, your voice tense. \"You are not going to believe what I just—\"\n" +
-                "\n" +
                 "\"Seventeen Ravenscroft Lane,\" Mark interrupts, his words coming in a rushed, excited gasp. \"I got it too. What the hell is this? Some kind of prank?\"\n" +
-                "\n" +
                 "You can hear the rumble of his car engine in the background. Your blood runs cold.\n" +
-                "\n" +
                 "\"Wait, you're going now? Mark, don't be stupid, we don't know what this is!\"\n" +
-                "\n" +
                 "\"Are you kidding? This is the most interesting thing that's happened all year! I'm already on my way. Meet me there. We'll figure it out together.\"\n" +
-                "\n" +
                 "The line goes dead.\n" +
-                "\n" +
-                "You hurry, pushing your car well past the speed limit, a sense of dread growing with every mile. The address leads you to a dilapidated house at the end of a long, deserted lane, shrouded in mist. You are late.\n" +
-                "\n" +
+                "You hurry, pushing your car well past the speed limit, a sense of dread growing with every mile." +
+                " \nThe address leads you to a dilapidated house at the end of a long, deserted lane, shrouded in mist. You are late.\n" +
                 "The scene is wrong. Deeply wrong.\n" +
-                "No cars are in sight. Not even Mark's. There are no people, and the nearest neighbor is nowhere visible. An oppressive silence hangs over everything, broken only by the wind.\n" +
-                "\n" +
+                "No cars are in sight. Not even Mark's. There are no people, and the nearest neighbor is nowhere visible." +
+                " An oppressive silence hangs over everything, broken only by the wind.\n" +
                 "Then, a single, piercing scream cuts through the air from inside the house. The front door hangs open, a dark mouth inviting you in.\n" +
-                "\n" +
                 "Your heart hammers against your ribs. As you approach, your eyes catch a glimpse of something in the dim hallway through the open door. An arm. Limp. Motionless.\n" +
-                "\n" +
                 "But it’s the watch on the wrist that makes your breath catch in your throat. You know that watch. You gave it to Mark for his birthday.\n" +
-                "\n" +
                 "What do you do?");
+        System.out.println("Type 'start' to roll the dice...");
+        new Scripts().startFirstDecisionHunted();
     }
 
     private void startGameScriptHunter() {
         System.out.println("17 Ravenscroft Lane. Come alone. Sent.\n" +
-                "\n" +
-                "Now we wait. I watch the screen, the glow painting my knuckles white. It isn't the most elegant plan. A mysterious text? A bit cliché. But it's the only play. He's cautious, paranoid. Without the bait of his friend, he'd never take the hook.\n" +
-                "\n" +
+                "Now we wait. I watch the screen, the glow painting my knuckles white. It isn't the most elegant plan. A mysterious text? A bit cliché." +
+                " \nBut it's the only play. He's cautious, paranoid. Without the bait of his friend, he'd never take the hook.\n" +
                 "My phone vibrates. The audio feed from Mark's car erupts with his excited, stupid voice. \"Seventeen Ravenscroft Lane! I got it too!\"\n" +
-                "\n" +
                 "A smile touches my lips. Perfect. The herd animal, leading the predator right to its heart.\n" +
-                "\n" +
                 "I listen as my target tries to warn him, his voice tight with fear. Good. Let him be afraid. Let him rush. Fear makes you sloppy.\n" +
-                "\n" +
                 "The engine roars in the feed. He's moving. The game is on.");
+        System.out.println("Type 'start' to roll the dice...");
 
+        Scanner scanner = new Scanner(System.in);
+        String user2 = scanner.nextLine();
+        String user = scanner.nextLine().toLowerCase().trim();
+        if(user2.contentEquals("start")){
+            new Scripts().startFirstDecisionHunter();
+        }
+    }
+
+    private void startFirstDecisionHunter(){
+        RollingDice myDice = new RollingDice();
+        int randomNumber = myDice.rollDice();
+        String answer = switch (randomNumber) {
+            case 1 -> "you bskefjnskfdjb";
+            case 2 -> "kjdfnlsnfd";
+            default -> "";
+        };
+        System.out.println(answer);
+    }
+
+    private void startFirstDecisionHunted(){
 
     }
 }
