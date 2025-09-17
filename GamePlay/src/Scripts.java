@@ -116,25 +116,51 @@ public class Scripts {
         System.out.println("Type 'start' to roll the dice...");
 
         Scanner scanner = new Scanner(System.in);
-        String user2 = scanner.nextLine();
-        String user = scanner.nextLine().toLowerCase().trim();
+        String user2 = scanner.nextLine().toLowerCase().trim();
         if(user2.contentEquals("start")){
             new Scripts().startFirstDecisionHunter();
         }
     }
 
     private void startFirstDecisionHunter(){
-        RollingDice myDice = new RollingDice();
-        int randomNumber = myDice.rollDice();
+        RollingDice myDice1 = new RollingDice();
+        int randomNumber = myDice1.rollDiceDecision();
         String answer = switch (randomNumber) {
-            case 1 -> "you bskefjnskfdjb";
-            case 2 -> "kjdfnlsnfd";
+            case 1 -> "case1";
+            case 2 -> "case2";
+            case 3 -> "case3";
             default -> "";
         };
         System.out.println(answer);
     }
 
     private void startFirstDecisionHunted(){
+        RollingDice myDice1 = new RollingDice();
+        int randomNumber = myDice1.rollDiceDecision();
+        String answer = switch (randomNumber) {
+            case 1 -> "case1";
+            case 2 -> "case2";
+            case 3 -> "case3";
+            default -> "";
+        };
+        System.out.println(answer);
+
+        if(answer.contentEquals("case1")){
+            new Scripts().startFirstDecisionCase1();
+        }else if(answer.contentEquals("case2")){
+            new Scripts().startFirstDecisionCase2();
+        }else if(answer.contentEquals("case3"));{
+            new Scripts().startFirstDecisionCase3();
+        }
+    }
+
+    private void startFirstDecisionCase1(){
+
+    }
+    private void startFirstDecisionCase2(){
+
+    }
+    private void startFirstDecisionCase3(){
 
     }
 }

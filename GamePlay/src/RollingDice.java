@@ -16,4 +16,8 @@ public class RollingDice {
         return random.nextInt(1,7);
     }
 
+    public int rollDiceDecision(){
+        return random.nextInt(1,4);
+    }
+
 }
