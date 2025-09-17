@@ -155,14 +155,67 @@ public class Scripts {
     }
 
     private void startFirstDecisionCase1(){
+        RollingDice myDice1 = new RollingDice();
+        int randomNumber = myDice1.rollDiceDecision();
+        String answer = switch (randomNumber) {
+            case 1 -> "case1";
+            case 2 -> "case2";
+            case 3 -> "case3";
+            default -> "";
+        };
+        System.out.println(answer);
 
+        if(answer.contentEquals("case1")){
+
+        }else if(answer.contentEquals("case2")){
+
+        }else if(answer.contentEquals("case3"));{
+
+        }
     }
+
+
     private void startFirstDecisionCase2(){
+        RollingDice myDice1 = new RollingDice();
+        int randomNumber = myDice1.rollDiceDecision();
+        String answer = switch (randomNumber) {
+            case 1 -> "case1";
+            case 2 -> "case2";
+            case 3 -> "case3";
+            default -> "";
+        };
+        System.out.println(answer);
 
+        if(answer.contentEquals("case1")){
+
+        }else if(answer.contentEquals("case2")){
+
+        }else if(answer.contentEquals("case3"));{
+
+        }
     }
+
+
     private void startFirstDecisionCase3(){
+        RollingDice myDice1 = new RollingDice();
+        int randomNumber = myDice1.rollDiceDecision();
+        String answer = switch (randomNumber) {
+            case 1 -> "case1";
+            case 2 -> "case2";
+            case 3 -> "case3";
+            default -> "";
+        };
+        System.out.println(answer);
 
+        if(answer.contentEquals("case1")){
+
+        }else if(answer.contentEquals("case2")){
+
+        }else if(answer.contentEquals("case3"));{
+
+        }
     }
+
 }
 
 
