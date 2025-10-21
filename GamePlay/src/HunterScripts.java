@@ -33,12 +33,27 @@ public class HunterScripts {
     }
 
     private void startFirstDecisionHunter(){
-        RollingDice myDice1 = new RollingDice();
-        int randomNumber = myDice1.rollDiceDecision();
+        new HunterScripts().generatingResponseHunter();
+    }
+
+    public void generatingResponseHunter() {
+        //NEBENNOTIZ: ENTSCHEIDUNGSPUNKT WIRD GEWÜRFELT UND GESCHICHTE WIRD DAMIT WEITERERZÄHLT
+
+        RollingDice myDice = new RollingDice();
+        int randomNumber = myDice.rollDice();
         String answer = switch (randomNumber) {
-            case 1 -> "case1";
-            case 2 -> "case2";
-            case 3 -> "case3";
+            case 1 -> "'I steady my breath and cock the rifle—whatever’s hunting me, I’ll hunt it first.'" +
+                    " But as your finger tightens on the trigger, you see it: your own silhouette aiming back from the dark.";
+            case 2 -> "'I follow the blood trail—tracks like these don’t vanish for no reason.'" +
+                    " The trail ends at a mirror-smooth puddle… and when you lean closer, your reflection grins before you do.";
+            case 3 -> "'I climb the rusted catwalk for higher ground—better view, better odds.'" +
+                    " The metal groans beneath your boots, whispering your name as something crawls up from below.";
+            case 4 -> "'I light a flare and toss it into the hallway—no shadows can hide now.'" +
+                    " But the light bends, twisting back toward you… and forms the outline of something crawling upside down on the ceiling.";
+            case 5 -> "'I open the old hunter’s journal—maybe it holds the secret to surviving this place.'" +
+                    " The ink bleeds across the page, rearranging into a single sentence: *You never left the hunt.*";
+            case 6 -> "'I drive my knife into the ground—marking my path, just in case I get turned around.'" +
+                    " Moments later, you pass the same mark again… but the knife is still wet, and now it’s pointing at you.";
             default -> "";
         };
         System.out.println(answer);
