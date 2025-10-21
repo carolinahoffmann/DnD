@@ -44,11 +44,11 @@ public class Scripts {
 
             if (user.contentEquals("hunter")) {
                 gameSettings.createJsonHunterSettings();
-                scripts.characterHunterScript();
+                HunterScripts.characterHunterScript();
                 break;
             } else if (user.contentEquals("hunted")) {
                 gameSettings.createJsonHuntedSettings();
-                scripts.characterHuntedScript();
+                HuntedScripts.characterHuntedScript();
                 break;
             } else {
                 System.out.println("Try again.\nHunter or hunted?");
@@ -61,160 +61,26 @@ public class Scripts {
         }
     }
 
-    public void characterHunterScript() {
-        System.out.println("Who are you gonna be, choose wisely \nPick a character by entering their number");
-        Scanner scanner = new Scanner(System.in);
-        String user2 = scanner.nextLine();
-
-       if((user2.equals("1")||(user2.equals("2")))){
-           new Scripts().startGameScriptHunter();
-        }
-    }
-
-    public void characterHuntedScript() {
-        System.out.println("Who are you gonna be, choose wisely \nPick a character by entering their number");
-        Scanner scanner = new Scanner(System.in);
-        String user2 = scanner.nextLine();
-
-        if((user2.equals("1")||(user2.equals("2"))||(user2.equals("3")))){
-            new Scripts().startGameScriptHunted();
-        }
-    }
 
 
-    private void startGameScriptHunted() {
-        System.out.println("Your phone buzzes violently in your pocket, shattering the quiet of your evening. It’s a single text message from an unknown number." +
-                        "No greeting, no explanation. \nJust an address. UNKNOWN NUMBER: 17 Ravenscroft Lane. Come alone. " +
-                "A cold knot forms in your stomach. Before the panic can fully take hold, your phone rings. It’s your friend, Mark.\n" +
-                "\"Hey,\" you answer, your voice tense. \"You are not going to believe what I just—\"\n" +
-                "\"Seventeen Ravenscroft Lane,\" Mark interrupts, his words coming in a rushed, excited gasp. \"I got it too. What the hell is this? Some kind of prank?\"\n" +
-                "You can hear the rumble of his car engine in the background. Your blood runs cold.\n" +
-                "\"Wait, you're going now? Mark, don't be stupid, we don't know what this is!\"\n" +
-                "\"Are you kidding? This is the most interesting thing that's happened all year! I'm already on my way. Meet me there. We'll figure it out together.\"\n" +
-                "The line goes dead.\n" +
-                "You hurry, pushing your car well past the speed limit, a sense of dread growing with every mile." +
-                " \nThe address leads you to a dilapidated house at the end of a long, deserted lane, shrouded in mist. You are late.\n" +
-                "The scene is wrong. Deeply wrong.\n" +
-                "No cars are in sight. Not even Mark's. There are no people, and the nearest neighbor is nowhere visible." +
-                " An oppressive silence hangs over everything, broken only by the wind.\n" +
-                "Then, a single, piercing scream cuts through the air from inside the house. The front door hangs open, a dark mouth inviting you in.\n" +
-                "Your heart hammers against your ribs. As you approach, your eyes catch a glimpse of something in the dim hallway through the open door. An arm. Limp. Motionless.\n" +
-                "But it’s the watch on the wrist that makes your breath catch in your throat. You know that watch. You gave it to Mark for his birthday.\n" +
-                "What do you do?");
-        System.out.println("Type 'start' to roll the dice...");
-        new Scripts().startFirstDecisionHunted();
-    }
-
-    private void startGameScriptHunter() {
-        System.out.println("17 Ravenscroft Lane. Come alone. Sent.\n" +
-                "Now we wait. I watch the screen, the glow painting my knuckles white. It isn't the most elegant plan. A mysterious text? A bit cliché." +
-                " \nBut it's the only play. He's cautious, paranoid. Without the bait of his friend, he'd never take the hook.\n" +
-                "My phone vibrates. The audio feed from Mark's car erupts with his excited, stupid voice. \"Seventeen Ravenscroft Lane! I got it too!\"\n" +
-                "A smile touches my lips. Perfect. The herd animal, leading the predator right to its heart.\n" +
-                "I listen as my target tries to warn him, his voice tight with fear. Good. Let him be afraid. Let him rush. Fear makes you sloppy.\n" +
-                "The engine roars in the feed. He's moving. The game is on.");
-        System.out.println("Type 'start' to roll the dice...");
-
-        Scanner scanner = new Scanner(System.in);
-        String user2 = scanner.nextLine().toLowerCase().trim();
-        if(user2.contentEquals("start")){
-            new Scripts().startFirstDecisionHunter();
-        }
-    }
-
-    private void startFirstDecisionHunter(){
-        RollingDice myDice1 = new RollingDice();
-        int randomNumber = myDice1.rollDiceDecision();
-        String answer = switch (randomNumber) {
-            case 1 -> "case1";
-            case 2 -> "case2";
-            case 3 -> "case3";
-            default -> "";
-        };
-        System.out.println(answer);
-    }
-
-    private void startFirstDecisionHunted(){
-        RollingDice myDice1 = new RollingDice();
-        int randomNumber = myDice1.rollDiceDecision();
-        String answer = switch (randomNumber) {
-            case 1 -> "case1";
-            case 2 -> "case2";
-            case 3 -> "case3";
-            default -> "";
-        };
-        System.out.println(answer);
-
-        if(answer.contentEquals("case1")){
-            new Scripts().startFirstDecisionCase1();
-        }else if(answer.contentEquals("case2")){
-            new Scripts().startFirstDecisionCase2();
-        }else if(answer.contentEquals("case3"));{
-            new Scripts().startFirstDecisionCase3();
-        }
-    }
-
-    private void startFirstDecisionCase1(){
-        RollingDice myDice1 = new RollingDice();
-        int randomNumber = myDice1.rollDiceDecision();
-        String answer = switch (randomNumber) {
-            case 1 -> "case1";
-            case 2 -> "case2";
-            case 3 -> "case3";
-            default -> "";
-        };
-        System.out.println(answer);
-
-        if(answer.contentEquals("case1")){
-
-        }else if(answer.contentEquals("case2")){
-
-        }else if(answer.contentEquals("case3"));{
-
-        }
-    }
 
 
-    private void startFirstDecisionCase2(){
-        RollingDice myDice1 = new RollingDice();
-        int randomNumber = myDice1.rollDiceDecision();
-        String answer = switch (randomNumber) {
-            case 1 -> "case1";
-            case 2 -> "case2";
-            case 3 -> "case3";
-            default -> "";
-        };
-        System.out.println(answer);
-
-        if(answer.contentEquals("case1")){
-
-        }else if(answer.contentEquals("case2")){
-
-        }else if(answer.contentEquals("case3"));{
-
-        }
-    }
 
 
-    private void startFirstDecisionCase3(){
-        RollingDice myDice1 = new RollingDice();
-        int randomNumber = myDice1.rollDiceDecision();
-        String answer = switch (randomNumber) {
-            case 1 -> "case1";
-            case 2 -> "case2";
-            case 3 -> "case3";
-            default -> "";
-        };
-        System.out.println(answer);
 
-        if(answer.contentEquals("case1")){
 
-        }else if(answer.contentEquals("case2")){
 
-        }else if(answer.contentEquals("case3"));{
 
-        }
-    }
+
+
+
+
+
+
+
+
+
+
 
 }
 
