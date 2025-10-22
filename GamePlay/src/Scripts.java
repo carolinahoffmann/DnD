@@ -41,7 +41,6 @@ public class Scripts {
         Scanner scanner = new Scanner(System.in);
 
         String user = scanner.nextLine().toLowerCase().trim();
-        GameSettings gameSettings = new GameSettings();
         Scripts scripts = new Scripts();
 
         if (user.contentEquals("end")){
