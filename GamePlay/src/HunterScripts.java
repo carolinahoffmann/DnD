@@ -40,7 +40,7 @@ public class HunterScripts {
         RollingDice myDice = new RollingDice();
         int randomNumber = myDice.rollDice();
         String answer = switch (randomNumber) {
-            case 1 -> "'I steady my breath and cock the rifle—whatever’s hunting me, I’ll hunt it first.'" +
+            case 1 -> "'I steady my breath —whatever’s hunting me, I’ll hunt it first.'" +
                     " But as your finger tightens on the trigger, you see it: your own silhouette aiming back from the dark.";
             case 2 -> "'I follow the blood trail—tracks like these don’t vanish for no reason.'" +
                     " The trail ends at a mirror-smooth puddle… and when you lean closer, your reflection grins before you do.";
