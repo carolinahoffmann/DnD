@@ -37,8 +37,6 @@ public class HunterScripts {
     }
 
     public void generatingResponseHunter() {
-        //NEBENNOTIZ: ENTSCHEIDUNGSPUNKT WIRD GEWÜRFELT UND GESCHICHTE WIRD DAMIT WEITERERZÄHLT
-
         RollingDice myDice = new RollingDice();
         int randomNumber = myDice.rollDice();
         String answer = switch (randomNumber) {
@@ -59,5 +57,3 @@ public class HunterScripts {
         System.out.println(answer);
     }
 }
-
-

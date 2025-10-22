@@ -8,6 +8,9 @@ public class GameSettings {
         new Scripts().startScript();
     }
 
+    public void endAndSaveGame(){
+        new Scripts().endgame();
+    }
     public void createJsonHuntedSettings() {
         HuntedSerializer serializer = new HuntedSerializer("Gameplay/src/huntedCharacter.json");
         serializer.deserializeHunted();
@@ -17,6 +20,8 @@ public class GameSettings {
         HunterSerializer serializer1 = new HunterSerializer("Gameplay/src/hunterCharacter.json");
         serializer1.deserializeHunter();
     }
+
+    //public void createJsonMilestonesHunter(){
+      //  MilestonesHunter milestonesHunter = new MilestonesHunter("GamePlay/src/milestonesHunter.json");
+    //}
 }
-
-

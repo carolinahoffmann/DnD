@@ -37,6 +37,22 @@ public class Scripts {
     }
 
 
+    public void endgame(){
+        Scanner scanner = new Scanner(System.in);
+
+        String user = scanner.nextLine().toLowerCase().trim();
+        GameSettings gameSettings = new GameSettings();
+        Scripts scripts = new Scripts();
+
+        if (user.contentEquals("end")){
+            scripts.saveGame();
+        }
+    }
+
+    public void saveGame() {
+
+    }
+
 }
 
 
