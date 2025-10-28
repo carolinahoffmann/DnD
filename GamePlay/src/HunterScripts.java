@@ -23,7 +23,7 @@ public class HunterScripts {
                 "A smile touches my lips. Perfect. The herd animal, leading the predator right to its heart.\n" +
                 "I listen as my target tries to warn him, his voice tight with fear. Good. Let him be afraid. Let him rush. Fear makes you sloppy.\n" +
                 "The engine roars in the feed. He's moving. The game is on.");
-        System.out.println("Type 'start' to roll the dice...");
+        System.out.println("Type 'start'");
 
         Scanner scanner = new Scanner(System.in);
         String user2 = scanner.nextLine().toLowerCase().trim();
@@ -33,7 +33,11 @@ public class HunterScripts {
     }
 
     private void startFirstDecisionHunter(){
-        System.out.println("Your choice. Type in the number of the option" + );
+        new GameSettings().createJsonHunterRooms();
+        System.out.println("Your choice. Type in the number of the option");
+
+        //Scanner scanner = new Scanner(System.in);
+        //String user2 = scanner.nextLine();
 
     }
 

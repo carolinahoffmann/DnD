@@ -11,6 +11,11 @@ public class GameSettings {
     public void endAndSaveGame(){
         new Scripts().endgame();
     }
+
+    public void createJsonHunterRooms(){
+        HunterSerializer roomSerializer = new HunterSerializer("GamePlay/src/hunterRooms.json");
+        roomSerializer.deserializeHunter();
+    }
     public void createJsonHuntedSettings() {
         HuntedSerializer serializer = new HuntedSerializer("Gameplay/src/huntedCharacter.json");
         serializer.deserializeHunted();

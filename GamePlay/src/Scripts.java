@@ -15,15 +15,16 @@ public class Scripts {
         while (tries < maxTries) {
             String user = scanner.nextLine().toLowerCase().trim();
             GameSettings gameSettings = new GameSettings();
-            Scripts scripts = new Scripts();
+            HunterScripts hunterScripts = new HunterScripts();
+            HuntedScripts huntedScripts = new HuntedScripts();
 
             if (user.contentEquals("hunter")) {
                 gameSettings.createJsonHunterSettings();
-                HunterScripts.characterHunterScript();
+                hunterScripts.characterHunterScript();
                 break;
             } else if (user.contentEquals("hunted")) {
                 gameSettings.createJsonHuntedSettings();
-                HuntedScripts.characterHuntedScript();
+                huntedScripts.characterHuntedScript();
                 break;
             } else {
                 System.out.println("Try again.\nHunter or hunted?");

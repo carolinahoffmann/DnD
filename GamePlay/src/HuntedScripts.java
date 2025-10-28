@@ -33,12 +33,14 @@ public class HuntedScripts {
                 "Your heart hammers against your ribs. As you approach, your eyes catch a glimpse of something in the dim hallway through the open door. An arm. Limp. Motionless.\n" +
                 "But it’s the watch on the wrist that makes your breath catch in your throat. You know that watch. You gave it to Mark for his birthday.\n" +
                 "What do you do?");
-        System.out.println("Type 'start' to roll the dice...");
+        System.out.println("Type 'start'");
         new HuntedScripts().startFirstDecisionHunted();
     }
 
     private void startFirstDecisionHunted(){
-        new HuntedScripts().generatingResponse2Hunted();
+
+        System.out.println("Pick an option by typing in their number");
+
     }
 
 
