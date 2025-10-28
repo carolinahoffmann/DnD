@@ -33,10 +33,11 @@ public class HunterScripts {
     }
 
     private void startFirstDecisionHunter(){
-        new HunterScripts().generatingResponseHunter();
+        System.out.println("Your choice. Type in the number of the option" + );
+
     }
 
-    public void generatingResponseHunter() {
+    public void generatingResponse2Hunter() {
         RollingDice myDice = new RollingDice();
         int randomNumber = myDice.rollDice();
         String answer = switch (randomNumber) {

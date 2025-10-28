@@ -38,11 +38,11 @@ public class HuntedScripts {
     }
 
     private void startFirstDecisionHunted(){
-        new HuntedScripts().generatingResponseHunted();
+        new HuntedScripts().generatingResponse2Hunted();
     }
 
 
-    public void generatingResponseHunted() {
+    public void generatingResponse2Hunted() {
         RollingDice myDice = new RollingDice();
         int randomNumber = myDice.rollDice();
         String answer = switch (randomNumber) {
