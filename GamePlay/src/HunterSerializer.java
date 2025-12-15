@@ -37,7 +37,8 @@ public class HunterSerializer {
                 Character currentChar = new Character();
                 Object value = jsonObject.get(key);
                 String jsonString = prettier(value.toString());
-                System.out.println(key + jsonString);
+                //System.out.println(key + jsonString);
+                printOutSeperateLines(key + jsonString);
                 characterList.add(currentChar);
             }
             return characterList;
@@ -47,6 +48,17 @@ public class HunterSerializer {
             System.out.println("[ERROR] Json parsing failed: " + r.toString());
         }
         return new ArrayList<Character>();
+    }
+
+    public void printOutSeperateLines(String outcome){
+        System.out.println(outcome);
+        for (int i = 0; i < outcome.length(); i++){
+            outcome.charAt(i);
+            
+           // if(outcome.charAt(i) == "*"){
+
+            //}
+        }
     }
 
     //JAVA zu JSON (JSON Datei zu schreiben)
