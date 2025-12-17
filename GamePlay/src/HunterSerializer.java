@@ -63,11 +63,11 @@ public class HunterSerializer
     }
 
     public void printOutSeperateLines(String outcome)
-    {
+   {
         System.out.println(outcome);
         for (int i = 0; i < outcome.length(); i++)
         {
-            outcome.charAt(i);
+           outcome.charAt(i);
 
             //if (outcome.charAt(i) == "*")
 
