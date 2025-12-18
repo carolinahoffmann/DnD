@@ -33,8 +33,24 @@ public class HunterScripts {
     }
 
     private void startFirstDecisionHunter(){
-        new GameSettings().createJsonHunterRooms();
-        System.out.println("Your choice. Type in the number of the option");
+
+            RollingDice dice = new RollingDice();
+            int rolledNumber = dice.rollDice();
+
+            System.out.println("You rolled a: " + rolledNumber);
+
+            HunterSerializer serializer =
+                    new HunterSerializer("hunterRooms.json");
+
+            String chosenRoom = serializer.getRandomRoomByDice(rolledNumber);
+
+            System.out.println("Next location: " + chosenRoom);
+
+            generatingResponse2Hunter();
+
+
+        //new GameSettings().createJsonHunterRooms();
+        //System.out.println("Your choice. Type in the number of the option");
 
         //Scanner scanner = new Scanner(System.in);
         //String user2 = scanner.nextLine();

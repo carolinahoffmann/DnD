@@ -1,0 +1,16 @@
+{
+  "UPSTAIRS": "1",
+  "CORRIDOR": "2",
+  "LIVING ROOM": "3",
+  "KITCHEN": "4",
+  "STORAGE ROOM": "5",
+  "BATHROOM DOWNSTAIRS": "6",
+  "WORK ROOM": "2",
+  "PANTRY": "1",
+  "STAIRS UP": "6",
+  "CORRIDOR UPSTAIRS": "5",
+  "CHILDRENS BEDROOM": "4",
+  "BEDROOM": "3",
+  "BATHROOM UPSTAIRS": "2",
+  "HIDDEN ROOM": "1"
+}
