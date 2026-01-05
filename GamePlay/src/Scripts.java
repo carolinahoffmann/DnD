@@ -1,5 +1,6 @@
 package GamePlay.src;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Scripts {
@@ -39,14 +40,15 @@ public class Scripts {
 
 
     public void endgame(){
-        Scanner scanner = new Scanner(System.in);
+       Scanner scanner = new Scanner(System.in);
+       String user = scanner.nextLine().toLowerCase().trim();
+       Scripts scripts = new Scripts();
 
-        String user = scanner.nextLine().toLowerCase().trim();
-        Scripts scripts = new Scripts();
-
-        if (user.contentEquals("end")){
-            scripts.saveGame();
-        }
+       if (user.contentEquals("end"))
+       {
+           scripts.saveGame();
+       }
+       scanner.close();
     }
 
     public void saveGame() {

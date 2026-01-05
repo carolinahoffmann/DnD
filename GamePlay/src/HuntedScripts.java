@@ -12,6 +12,7 @@ public class HuntedScripts {
         if((user2.equals("1")||(user2.equals("2"))||(user2.equals("3")))){
             new HuntedScripts().startGameScriptHunted();
         }
+        scanner.close();
     }
 
     private void startGameScriptHunted() {

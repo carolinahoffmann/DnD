@@ -13,6 +13,7 @@ public class HunterScripts {
         if((user2.equals("1")||(user2.equals("2")))){
             new HunterScripts().startGameScriptHunter();
         }
+        scanner.close();
     }
 
     private void startGameScriptHunter() {
@@ -30,6 +31,7 @@ public class HunterScripts {
         if(user2.contentEquals("start")){
             new HunterScripts().startFirstDecisionHunter();
         }
+        scanner.close();
     }
 
     private void startFirstDecisionHunter(){
@@ -40,7 +42,7 @@ public class HunterScripts {
             System.out.println("You rolled a: " + rolledNumber);
 
             HunterSerializer serializer =
-                    new HunterSerializer("hunterRooms.json");
+                    new HunterSerializer("Gameplay/src/hunterRooms.json");
 
             String chosenRoom = serializer.getRandomRoomByDice(rolledNumber);
 
@@ -54,6 +56,7 @@ public class HunterScripts {
 
         //Scanner scanner = new Scanner(System.in);
         //String user2 = scanner.nextLine();
+        //scanner.close();
 
     }
 
