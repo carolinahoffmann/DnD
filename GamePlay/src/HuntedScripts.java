@@ -33,13 +33,30 @@ public class HuntedScripts {
                 "Your heart hammers against your ribs. As you approach, your eyes catch a glimpse of something in the dim hallway through the open door. An arm. Limp. Motionless.\n" +
                 "But it’s the watch on the wrist that makes your breath catch in your throat. You know that watch. You gave it to Mark for his birthday.\n" +
                 "What do you do?");
-        System.out.println("Type 'start'");
-        new HuntedScripts().startFirstDecisionHunted();
+        System.out.println("Type 'start' to begin the game or 'end' to quit at any time.");
+
+        Scanner scanner = new Scanner(System.in);
+        String user2 = scanner.nextLine().toLowerCase().trim();
+        if(user2.contentEquals("start")){
+            new HuntedScripts().startFirstDecisionHunted();
+        }
     }
 
     private void startFirstDecisionHunted(){
 
-        System.out.println("Pick an option by typing in their number");
+        RollingDice dice = new RollingDice();
+        int rolledNumber = dice.rollDice();
+
+        System.out.println("You rolled a: " + rolledNumber);
+
+        HuntedSerializer serializer =
+                new HuntedSerializer("Gameplay/src/huntedRooms.json");
+
+        String chosenRoom = serializer.getRandomRoomByDice(rolledNumber);
+
+        System.out.println("Next location: " + chosenRoom);
+
+        generatingResponse2Hunted();
 
     }
 
@@ -48,22 +65,20 @@ public class HuntedScripts {
         RollingDice myDice = new RollingDice();
         int randomNumber = myDice.rollDice();
         String answer = switch (randomNumber) {
-            case 1 -> "'I run down to the basement—maybe there’s a hiding spot or an exit'" +
-                    " but what awaits you below isn’t escape. Instead, a room filled with old, bloody shackles... " +
-                    " and something stirs in the shadows";
-            case 2 -> "'I rush into the bathroom and shove the cabinet against the door!'" +
-                    " But as you turn around, you see a second figure in the mirror—standing right behind you, " +
-                    " even though no one is there.";
-            case 3 -> "'I freeze and listen... Maybe it's just a rat?'" +
-                    " The scratching grows louder—then a bloody hand bursts through the wall and grabs your arm!";
-            case 4 -> "'I clutch the jagged remains of a bottle, ready to fight'" +
-                    " but as the killer steps into view, he mutters words that make no sense... " +
-                    " and your weapon explodes into splinters without being touched.";
-            case 5 -> "'I trace the scratching... could someone be trapped?' " +
-                    " Peeling back the wallpaper reveals a hollow space- " +
-                    " and inside, a journal bearing your name, gouged into the leather as if by a knife.";
-            case 6 -> "'I let out a decoy scream and slip into the wardrobe, certain I've tricked him...' " +
-                    " The moment the door clicks shut, moist air grazes your skin— You're not alone in here.";
+            case 1 -> "The ceiling creaks softly, as if someone shifted their weight above me. I hold my breath, knowing the house is no longer empty.";
+            case 2 -> "The corridor feels too long, every door a watching eye. My footsteps sound louder than they should, betraying me.";
+            case 3 -> "The living room looks untouched, almost welcoming, which makes it worse. Something has been waiting here longer than I have.";
+            case 4 -> "A drawer is slightly open, as if someone closed it in a hurry. I don’t remember touching anything.";
+            case 5 -> "Dust fills my lungs as I crouch between boxes. I hear a sound behind the door that doesn’t belong to the house.";
+            case 6 -> "The bathroom light flickers, and for a moment I see movement that isn’t mine. I turn slowly, already knowing.";
+            case 7 -> "The work room hums with quiet tension. I feel like I’ve interrupted something that hasn’t finished yet.";
+            case 8 -> "The door clicks shut behind me, though I never touched it. The darkness presses in, heavy and deliberate.";
+            case 9 -> "Halfway up the stairs, I feel exposed from every angle. Going back feels worse than going forward.";
+            case 10 -> "Every door upstairs is closed, and I don’t know which one hides answers—or something else. The air feels watched.";
+            case 11 -> "The children’s room feels wrong, frozen in time. I sense I’m not supposed to be here, yet I can’t leave.";
+            case 12 -> "I lock the bedroom door and lean against it, heart racing. The handle moves anyway.";
+            case 13 -> "The running tap can’t drown out the feeling that someone is close. I shut it off—and hear breathing.";
+            case 14 -> "The wall gives way to a space that shouldn’t exist. As it closes behind me, I realize the house has one last secret.";
             default -> "";
         };
         System.out.println(answer);

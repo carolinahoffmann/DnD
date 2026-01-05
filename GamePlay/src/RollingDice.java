@@ -13,7 +13,7 @@ public class RollingDice {
 
 
     public int rollDice(){
-        return random.nextInt(1,7);
+        return random.nextInt(1,15);
     }
 
     //public int rollDiceDecision(){

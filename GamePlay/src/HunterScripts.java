@@ -23,7 +23,7 @@ public class HunterScripts {
                 "A smile touches my lips. Perfect. The herd animal, leading the predator right to its heart.\n" +
                 "I listen as my target tries to warn him, his voice tight with fear. Good. Let him be afraid. Let him rush. Fear makes you sloppy.\n" +
                 "The engine roars in the feed. He's moving. The game is on.");
-        System.out.println("Type 'start'");
+        System.out.println("Type 'start' to begin the game or 'end' to quit at any time.");
 
         Scanner scanner = new Scanner(System.in);
         String user2 = scanner.nextLine().toLowerCase().trim();
@@ -62,18 +62,20 @@ public class HunterScripts {
         RollingDice myDice = new RollingDice();
         int randomNumber = myDice.rollDice();
         String answer = switch (randomNumber) {
-            case 1 -> "'I steady my breath —whatever’s hunting me, I’ll hunt it first.'" +
-                    " But as your finger tightens on the trigger, you see it: your own silhouette aiming back from the dark.";
-            case 2 -> "'I follow the blood trail—tracks like these don’t vanish for no reason.'" +
-                    " The trail ends at a mirror-smooth puddle… and when you lean closer, your reflection grins before you do.";
-            case 3 -> "'I climb the rusted catwalk for higher ground—better view, better odds.'" +
-                    " The metal groans beneath your boots, whispering your name as something crawls up from below.";
-            case 4 -> "'I light a flare and toss it into the hallway—no shadows can hide now.'" +
-                    " But the light bends, twisting back toward you… and forms the outline of something crawling upside down on the ceiling.";
-            case 5 -> "'I open the old hunter’s journal—maybe it holds the secret to surviving this place.'" +
-                    " The ink bleeds across the page, rearranging into a single sentence: *You never left the hunt.*";
-            case 6 -> "'I drive my knife into the ground—marking my path, just in case I get turned around.'" +
-                    " Moments later, you pass the same mark again… but the knife is still wet, and now it’s pointing at you.";
+            case 1 -> "From upstairs, I hear his hesitant steps below, each one a question he’s too afraid to ask out loud. I don’t move—prey always looks up eventually.";
+            case 2 -> "The corridor turns sound into a weapon, carrying his breathing straight to me. He doesn’t realize how clearly fear echoes in narrow spaces.";
+            case 3 -> "I watch from the shadowed corner as he scans the living room, pretending calm. He always forgets to check behind him.";
+            case 4 -> "The kitchen smells of cold metal and old meals, a place where people feel safe. Safety makes them careless.";
+            case 5 -> "Boxes stacked too neatly tell me he’s been here already. He thinks clutter hides him; it only maps his panic.";
+            case 6 -> "The mirror reflects more than faces when the light hits just right. I wait for him to look up.";
+            case 7 -> "Tools lie untouched, but the chair is warm. He was here recently, close enough to hear me breathe.";
+            case 8 -> "I shut the pantry door softly and listen to him freeze on the other side. Silence is louder when trapped.";
+            case 9 -> "Stairs turn fear into rhythm, each step a countdown. I time my movement between his heartbeats.";
+            case 10 -> "Upstairs corridors are thinner, tighter, easier to control. He’s running out of choices.";
+            case 11 -> "Toys on the floor suggest innocence, but fear doesn’t care about age. I step carefully, enjoying the contrast.";
+            case 12 -> "The bedroom holds secrets people think are private. I let him believe this door means safety.";
+            case 13 -> "Water masks sound, which makes surprises easier. I wait until he thinks he’s alone.";
+            case 14 -> "The hidden room was never meant to keep people out, only to keep them in. He’s finally found it.";
             default -> "";
         };
         System.out.println(answer);
