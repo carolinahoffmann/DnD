@@ -32,7 +32,6 @@ public class Scripts {
                 tries++;
             }
         }
-        scanner.close();
         if (tries == maxTries) {
             throw new IllegalArgumentException("Game over...");
         }
@@ -48,7 +47,6 @@ public class Scripts {
        {
            scripts.saveGame();
        }
-       scanner.close();
     }
 
     public void saveGame() {

@@ -13,7 +13,6 @@ public class HunterScripts {
         if((user2.equals("1")||(user2.equals("2")))){
             new HunterScripts().startGameScriptHunter();
         }
-        scanner.close();
     }
 
     private void startGameScriptHunter() {
@@ -31,7 +30,6 @@ public class HunterScripts {
         if(user2.contentEquals("start")){
             new HunterScripts().startFirstDecisionHunter();
         }
-        scanner.close();
     }
 
     private void startFirstDecisionHunter(){
